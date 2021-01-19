@@ -1,5 +1,4 @@
 const path = require('path');
-const webpack = require('webpack');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 
@@ -55,12 +54,12 @@ module.exports = {
         ]
       },
       {
-        test: /\.svg$/,
+        test: /\.(svg|png|jpg|gif)$/,
         include: path.join(__dirname, 'src/images'),
         type: 'asset/resource'
       },
       {
-        test: /\.woff$/,
+        test: /\.(woff|woff2|eot|ttf)$/,
         include: path.join(__dirname, 'src/fonts'),
         type: 'asset/resource'
       }

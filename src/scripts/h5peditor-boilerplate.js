@@ -29,6 +29,13 @@ class Boilerplate {
     this.fieldInstance = new H5PEditor.widgets[this.field.type](this.parent, this.field, this.params, this.setValue);
     this.fieldInstance.appendTo(this.$container);
 
+    // Relay changes
+    if (this.fieldInstance.changes) {
+      this.fieldInstance.changes.push(() => {
+        this.handleFieldChange();
+      });
+    }
+
     // Errors (or add your own)
     this.$errors = this.$container.find('.h5p-errors');
 
@@ -57,5 +64,15 @@ class Boilerplate {
   remove() {
     this.$container.remove();
   }
+
+  /**
+   * Handle change of field.
+   */
+  handleFieldChange() {
+    this.params = this.fieldInstance.params;
+    this.changes.forEach(change => {
+      change(this.params);
+    });
+  }  
 }
 export default Boilerplate;

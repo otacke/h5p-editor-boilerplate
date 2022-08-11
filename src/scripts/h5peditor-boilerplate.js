@@ -1,5 +1,5 @@
 /** Class for Boilerplate H5P widget */
-class Boilerplate {
+export default class Boilerplate {
 
   /**
    * @constructor
@@ -73,6 +73,5 @@ class Boilerplate {
     this.changes.forEach(change => {
       change(this.params);
     });
-  }  
+  }
 }
-export default Boilerplate;

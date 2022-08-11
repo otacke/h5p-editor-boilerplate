@@ -2,7 +2,7 @@
 export default class Boilerplate {
 
   /**
-   * @constructor
+   * @class
    * @param {object} parent Parent element in semantics.
    * @param {object} field Semantics field properties.
    * @param {object} params Parameters entered in editor form.
@@ -44,6 +44,7 @@ export default class Boilerplate {
 
   /**
    * Append field to wrapper. Invoked by H5P core.
+   *
    * @param {H5P.jQuery} $wrapper Wrapper.
    */
   appendTo($wrapper) {
@@ -52,7 +53,8 @@ export default class Boilerplate {
 
   /**
    * Validate current values. Invoked by H5P core.
-   * @return {boolean} True, if current value is valid, else false.
+   *
+   * @returns {boolean} True, if current value is valid, else false.
    */
   validate() {
     return this.fieldInstance.validate();

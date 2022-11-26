@@ -1,3 +1,5 @@
+import './../styles/h5p-editor-boilerplate.scss';
+
 /** Class for Boilerplate H5P widget */
 export default class Boilerplate {
 
@@ -72,7 +74,7 @@ export default class Boilerplate {
    */
   handleFieldChange() {
     this.params = this.fieldInstance.params;
-    this.changes.forEach(change => {
+    this.changes.forEach((change) => {
       change(this.params);
     });
   }

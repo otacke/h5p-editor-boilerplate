@@ -46,7 +46,6 @@ export default class Boilerplate {
 
   /**
    * Append field to wrapper. Invoked by H5P core.
-   *
    * @param {H5P.jQuery} $wrapper Wrapper.
    */
   appendTo($wrapper) {
@@ -55,7 +54,6 @@ export default class Boilerplate {
 
   /**
    * Validate current values. Invoked by H5P core.
-   *
    * @returns {boolean} True, if current value is valid, else false.
    */
   validate() {

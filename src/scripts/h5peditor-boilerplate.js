@@ -1,4 +1,4 @@
-import './../styles/h5p-editor-boilerplate.scss';
+import '@styles/h5peditor-boilerplate.scss';
 
 /** Class for Boilerplate H5P widget */
 export default class Boilerplate {

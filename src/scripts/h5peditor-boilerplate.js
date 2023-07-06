@@ -49,7 +49,7 @@ export default class Boilerplate {
    * @param {H5P.jQuery} $wrapper Wrapper.
    */
   appendTo($wrapper) {
-    this.$container.appendTo($wrapper);
+    $wrapper.get(0).append(this.$container.get(0));
   }
 
   /**
@@ -64,7 +64,7 @@ export default class Boilerplate {
    * Remove self. Invoked by H5P core.
    */
   remove() {
-    this.$container.remove();
+    this.$container.get(0).remove();
   }
 
   /**

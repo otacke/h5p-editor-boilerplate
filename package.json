@@ -19,6 +19,7 @@
   ],
   "author": "Oliver Tacke",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "@babel/cli": "^7.22.6",
     "@babel/core": "^7.22.8",
@@ -38,5 +39,5 @@
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4"
   },
-  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead"
+  "browserslist": "> 0.5%, last 3 versions, Firefox ESR, not dead"
 }

@@ -1,2 +1,2 @@
-H5P Editor Boilerplate
+H5P Editor Choice Explorer
 ==========

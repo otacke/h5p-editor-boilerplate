@@ -1,0 +1,17 @@
+.h5peditor-choice-explorer-weights {
+  /* Common colors */
+  --color-background: #fff;
+  --color-text: #4c4452;
+  --color-text-dark: var(--color-text);
+  --color-text-light: #fff;
+
+  --color-shadow-light: rgba(166, 166, 166, .2);
+
+  /* Disabled color, e.g. for buttons */
+  --color-disabled: rgb(128 128 128 / 95%);
+
+  /* Commonly used by H5P Group */
+  --color-wrong: #b71c1c;
+  --color-correct: #255c41;
+  --color-box-border: #d0d0d1;
+}

@@ -1,7 +1,5 @@
-import '@styles/h5peditor-boilerplate.scss';
-
-/** Class for Boilerplate H5P widget */
-export default class Boilerplate {
+import './h5peditor-auto-uuid.scss';
+export default class AutoUUID {
 
   /**
    * @class
@@ -22,26 +20,30 @@ export default class Boilerplate {
     // Let parent handle ready callbacks of children
     this.passReadies = true;
 
-    // DOM
     this.$container = H5P.jQuery('<div>', {
-      class: 'h5peditor-boilerplate'
+      class: 'h5peditor-auto-uuid'
     });
 
-    // Instantiate original field (or create your own and call setValue)
+    if (this.field.type !== 'text') {
+      this.$container.get(0).innerHTML = 'This widget only supports text fields.';
+      return;
+    }
+
     this.fieldInstance = new H5PEditor.widgets[this.field.type](this.parent, this.field, this.params, this.setValue);
     this.fieldInstance.appendTo(this.$container);
 
-    // Relay changes
     if (this.fieldInstance.changes) {
       this.fieldInstance.changes.push(() => {
         this.handleFieldChange();
       });
     }
 
-    // Errors (or add your own)
-    this.$errors = this.$container.find('.h5p-errors');
+    this.$errors = this.$container.get(0).querySelector('.h5p-errors');
 
-    // Use H5PEditor.t('H5PEditor.Boilerplate', 'foo'); to output translatable strings
+    if (!this.params) {
+      this.fieldInstance.$input.get(0).value = H5P.createUUID();
+      this.fieldInstance.$input.get(0).dispatchEvent(new Event('change', { bubbles: true }));
+    }
   }
 
   /**

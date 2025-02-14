@@ -1,0 +1,23 @@
+.h5peditor-choice-explorer-weights-matrix {
+  align-items: center;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-box-border);
+  color: var(--color-text);
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: var(--template-columns, 1fr);
+  padding: 10px; /* Not happy about px, but that is what H5P Group uses in editor */
+
+  .h5peditor-choice-explorer-weights-matrix-label {
+    min-height: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .h5peditor-choice-explorer-weights-matrix-input {
+    &:invalid {
+      border-color: var(--color-wrong);
+    }
+  }
+}

@@ -22,7 +22,7 @@ export default class Boilerplate {
 
     // DOM
     this.$container = H5P.jQuery('<div>', {
-      class: 'h5peditor-boilerplate'
+      class: 'h5peditor-boilerplate',
     });
 
     // Instantiate original field (or create your own and call setValue)
